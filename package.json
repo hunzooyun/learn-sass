@@ -1,9 +1,11 @@
 {
   "scripts": {
     "serve": "live-server --port=8090 --host=localhost",
-    "sass": "sass src/syntax/input.scss src/syntax/output.css",
+    "sass": "sass src/syntax:src/css",
     "watch": "npm run sass -- --watch",
-    "update": "npm run watch -- --update"
+    "update": "npm run watch -- --update",
+    "remove": "rm -rf ./src/css",
+    "build": "npm run sass -- --style compressed --no-source-map"
   },
   "devDependencies": {
     "live-server": "^1.2.2",
